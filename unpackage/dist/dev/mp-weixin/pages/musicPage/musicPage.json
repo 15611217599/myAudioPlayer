@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "disableScroll": true,
+  "usingComponents": {
+    "nav-tab": "/components/navTab",
+    "tab-bar4": "/components/tabBar4",
+    "music-player": "/pages/musicPage/info/index"
+  }
+}

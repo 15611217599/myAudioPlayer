@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "disableScroll": true,
+  "navigationStyle": "custom",
+  "titleNView": false,
+  "bounce": "none",
+  "usingComponents": {}
+}

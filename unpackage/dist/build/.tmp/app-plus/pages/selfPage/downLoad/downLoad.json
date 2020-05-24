@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "下载",
+  "navigationBarTextStyle": "black",
+  "disableScroll": true,
+  "navigationStyle": "default",
+  "backgroundColor": "#000000",
+  "titleColor": "#000000",
+  "bounce": "none",
+  "usingComponents": {
+    "nav-tab": "/components/navTab"
+  }
+}

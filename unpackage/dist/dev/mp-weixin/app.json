@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/videoPage/videoPage",
+    "pages/musicPage/musicPage",
+    "pages/musicPage/info/index",
+    "pages/selfPage/selfPage",
+    "pages/videoPage/videoPlayer/videoPlayer",
+    "pages/videoPage/serch/serch"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTitleText": "",
+    "disableScroll": true,
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#50B7EA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/videoPage/videoPage",
+        "text": "视频",
+        "iconPath": "/static/video_change.png",
+        "selectedIconPath": "static/video_index.png"
+      },
+      {
+        "pagePath": "pages/musicPage/musicPage",
+        "text": "音乐",
+        "iconPath": "/static/music_change.png",
+        "selectedIconPath": "static/music_index.png"
+      },
+      {
+        "pagePath": "pages/selfPage/selfPage",
+        "text": "我的",
+        "iconPath": "static/my_change.png",
+        "selectedIconPath": "static/my_index.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "usingComponents": {}
+}

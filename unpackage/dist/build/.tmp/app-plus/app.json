@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/videoPage/videoPage",
+    "pages/musicPage/musicPage",
+    "pages/musicPage/info/index",
+    "pages/selfPage/selfPage",
+    "pages/videoPage/videoPlayer/videoPlayer",
+    "pages/videoPage/serch/serch",
+    "pages/selfPage/downLoad/downLoad",
+    "pages/selfPage/help/help",
+    "pages/selfPage/xiaocong-login/login/login",
+    "pages/selfPage/xiaocong-login/register/register",
+    "pages/selfPage/xiaocong-login/forget/forget"
+  ],
+  "window": {},
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#50B7EA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/videoPage/videoPage",
+        "text": "视频",
+        "iconPath": "/static/video_change.png",
+        "selectedIconPath": "/static/video_index.png"
+      },
+      {
+        "pagePath": "pages/musicPage/musicPage",
+        "text": "音乐",
+        "iconPath": "/static/music_change.png",
+        "selectedIconPath": "/static/music_index.png"
+      },
+      {
+        "pagePath": "pages/selfPage/selfPage",
+        "text": "我的",
+        "iconPath": "/static/my_change.png",
+        "selectedIconPath": "/static/my_index.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "浣熊影视",
+  "compilerVersion": "2.5.1",
+  "usingComponents": {}
+}

@@ -1,0 +1,176 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/videoPage/videoPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				
+				//禁止页面整体滚动
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+				
+			}
+		}, {
+			"path": "pages/musicPage/musicPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/musicPage/info/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				"navigationStyle": "custom",
+				//禁止页面整体滚动
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/selfPage/selfPage",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				//禁止页面整体滚动
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/videoPage/videoPlayer/videoPlayer",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				"navigationStyle": "custom",
+				//禁止页面整体滚动
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/videoPage/serch/serch",
+			"style": {
+				"navigationBarTitleText": "",
+				"disableScroll": true,
+				"navigationStyle": "custom",
+				//禁止页面整体滚动
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		}, {
+			"path": "pages/selfPage/downLoad/downLoad",
+			"style": {
+				//禁止页面整体滚动
+				"navigationBarTitleText": "下载",
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white",
+				"disableScroll": true,
+				"navigationStyle": "default",
+				
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+		}
+
+	    ,{
+            "path" : "pages/selfPage/help/help",
+            "style" : {
+				"navigationBarTitleText": "帮助",
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white",
+				"disableScroll": true,
+				"navigationStyle": "default",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        },{
+            "path" : "pages/selfPage/xiaocong-login/login/login",
+            "style" : {
+				"navigationBarTitleText": "登陆",
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white",
+				"disableScroll": true,
+				"navigationStyle": "default",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        },{
+            "path" : "pages/selfPage/xiaocong-login/register/register",
+            "style" : {
+				"navigationBarTitleText": "注册",
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white",
+				"disableScroll": true,
+				"navigationStyle": "default",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        },{
+            "path" : "pages/selfPage/xiaocong-login/forget/forget",
+            "style" : {
+				"navigationBarTitleText": "找回密码",
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white",
+				"disableScroll": true,
+				"navigationStyle": "default",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/videoPage/videoPlayer/videoWeb/videoWeb",
+            "style" : {
+				"navigationBarTextStyle":"black",
+				"navigationBarBackgroundColor":"white"
+			}
+        }
+    ],
+	"globalStyle": {
+
+	},
+	
+	//自动旋转屏幕
+	"pageOrientation": "portrait",
+	"tabBar": {
+		"color": "#cdcdcd",
+		"selectedColor": "#50B7EA",
+		"borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/videoPage/videoPage",
+				"text": "视频",
+				"iconPath": "/static/video_change.png",
+				"selectedIconPath": "/static/video_index.png"
+			},
+			{
+				"pagePath": "pages/musicPage/musicPage",
+				"text": "音乐",
+				"iconPath": "/static/music_change.png",
+				"selectedIconPath": "/static/music_index.png"
+			},
+			{
+				"pagePath": "pages/selfPage/selfPage",
+				"text": "我的",
+				"iconPath": "/static/my_change.png",
+				"selectedIconPath": "/static/my_index.png"
+			}
+		]
+	}
+}
