@@ -1,7 +1,7 @@
 <script>
 export default {
 	
-	//这样的全局变量可以挂在页面,再onshow中
+	//这样的全局变量可以挂在页面,再onshow
 	globalData:{
 		isShowPay : 'true'
 	},
