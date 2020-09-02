@@ -277,11 +277,11 @@ export default {
 			//#endif
 			/* #ifdef H5 */
 			//销毁====================
-			if (innerAudioContext) {
+			/* if (innerAudioContext) {
 				innerAudioContext.destroy();
 			}
 
-			innerAudioContext = uni.createInnerAudioContext();
+			innerAudioContext = uni.createInnerAudioContext(); */
 			/* #endif */
 
 			if (this.audioList.length == 0) {
@@ -291,7 +291,7 @@ export default {
 			let authorName = this.audioList[this.audioPlaySrc].authorName;
 			let name = this.audioList[this.audioPlaySrc].name;
 			let picUrl = this.audioList[this.audioPlaySrc].picUrl;
-			innerAudioContext.autoplay = true;
+			innerAudioContext.autoplay = false;
 			innerAudioContext.src = src;
 			//不理睬静音,不然ios有bug
 			innerAudioContext.obeyMuteSwitch = false;
@@ -304,7 +304,7 @@ export default {
 			this.$emit('changeSongMsg', this.audioList[this.audioPlaySrc]);
 
 			/* 这些监听项目是不是应该放在初始化 */
-			innerAudioContext.autoplay = true;
+			//innerAudioContext.autoplay = true;
 			//监听事件
 			innerAudioContext.onPlay(() => {
 				this.playFunc();
@@ -345,34 +345,6 @@ export default {
 						}
 					}
 				}
-
-				//控制在1分钟
-				if (this.nowmiao > 60 && getApp().globalData.isShowPay == 'true') {
-					/* 控制会员播放 */
-
-					console.log('我进来了 onshow video');
-					var userinfo = uni.getStorageSync('userinfo');
-					//已经登陆
-					if (!userinfo.length && userinfo.length != 0) {
-						if (!userinfo.vip) {
-							//非会员看5分钟
-							innerAudioContext.pause();
-							uni.showToast({
-								title: 'vip专享',
-								duration: 2000
-							});
-						} else if (userinfo.vip) {
-							//我是会员
-						}
-					} else {
-						//没有登陆
-						innerAudioContext.pause();
-						uni.showToast({
-							title: 'vip专享',
-							duration: 2000
-						});
-					}
-				}
 			});
 			innerAudioContext.onEnded(() => {
 				this.nextPlay();
@@ -389,6 +361,9 @@ export default {
 					icon: 'none',
 					title: `没有版权`
 				});
+				
+				this.nextPlay();
+				
 			});
 
 			//用户在系统音乐播放面板点击上一曲事件（iOS only）

@@ -39,7 +39,7 @@
 								选集
 								<text class="margin-lr-xs cuIcon-unfold"></text>
 							</view>
-							<view style="font-size: 25upx;font-weight: bold;width: 125upx;" @tap="goToWeb" data-target="xiazai">加速播放</view>
+							<!-- <view style="font-size: 25upx;font-weight: bold;width: 125upx;" @tap="goToWeb" data-target="xiazai">加速播放</view> -->
 						</view>
 					</view>
 				</view>
@@ -160,9 +160,9 @@ export default {
 			var url = showurl[i];
 			realUrls.push({
 				name: '第' + (i + 1) + '集',
-				url: url.split('$')[1],
+				url: url,
 				//0 本地下载 第i集 网络带过来的
-				type: url.split('$')[0]
+				type: i
 			});
 		}
 
@@ -173,8 +173,9 @@ export default {
 			var persent = url.split('$')[0] == '0' ? '100' : '0';
 			downUrls.push({
 				name: '第' + (i + 1) + '集',
-				url: url.split('$')[1],
-				type: url.split('$')[0],
+				url: url,
+				//0 本地下载 第i集 网络带过来的
+				type: i,
 				downPersent: persent
 			});
 		}
@@ -248,7 +249,7 @@ export default {
 			}
 
 			//每5s取一次吧
-			if (beforeTime % 5 == 0) {
+			if (beforeTime % 10 == 0) {
 				/* console.log('当前缓存时间 ' + beforeTime + '实际时间' + times); */
 				//取播放记录前5s,这样可以解决进来就切换或者点击视频自动切换下一个视频
 				uni.setStorageSync(this.video.id + '_' + this.clickButtonId, beforeTime);
@@ -259,8 +260,8 @@ export default {
 			}
 
 			//控制在5分钟
-			if (times > 300 && getApp().globalData.isShowPay == 'true') {
-				/* 控制会员播放 */
+			/* if (times > 300 && getApp().globalData.isShowPay == 'true') {
+				控制会员播放
 
 				console.log('我进来了 onshow video');
 				var userinfo = uni.getStorageSync('userinfo');
@@ -284,7 +285,7 @@ export default {
 						duration: 2000
 					});
 				}
-			}
+			} */
 		},
 		back() {
 			uni.navigateBack();
